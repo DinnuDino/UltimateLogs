@@ -1,0 +1,79 @@
+# ==============================================================================
+# UltimateLogs - Enterprise Audit, Live Inspection & Death Time Machine Core
+# Built for Minecraft 26.2 (Paper API) | Scalable Multi-Version Architecture
+# ==============================================================================
+
+settings:
+  # Server Timezone for date/time formatting (e.g., "Asia/Kolkata", "UTC", "America/New_York", "SYSTEM")
+  timezone: "Asia/Kolkata"
+  
+  # Date and Time Format for logs, GUI lore, and chat output
+  date-format: "dd/MM/yyyy"
+  time-format: "HH:mm:ss"
+
+database:
+  # Database engine: "SQLITE" (recommended for single server) or "MYSQL" (for networks)
+  engine: "SQLITE"
+  
+  # SQLite file name (stored inside plugins/UltimateLogs/)
+  sqlite-file: "ultimate_logs.db"
+  
+  # MySQL / MariaDB connection settings (only used if engine is "MYSQL")
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "ultimate_logs"
+    username: "root"
+    password: ""
+    use-ssl: false
+    pool-size: 10
+
+logging:
+  # Snapshot frequency (seconds)
+  position-snapshot-interval-seconds: 1
+  inventory-snapshot-interval-seconds: 1
+
+  # Automated run-length deduplication:
+  # Suppresses duplicate rows when player is idle or inventory has not changed.
+  # Merges identical states into a single record with exact duration and time interval!
+  deduplication-enabled: true
+
+  # Queue flush interval in seconds
+  flush-interval-seconds: 5
+
+  # Track dedicated container transactions (chests, barrels, hoppers, shulkers)
+  log-container-transactions: true
+
+  # Track item events (pickups, drops, crafting, smelting, enchanting)
+  log-item-events: true
+
+  # Track player block place/break actions
+  log-block-actions: true
+
+  # Track player join/quit sessions and play duration
+  log-sessions: true
+
+  # Track IP addresses in session logs (can be disabled for privacy)
+  track-ip-addresses: true
+
+  # Dedicated death logging with complete inventory, ender chest, and coordinates
+  log-deaths: true
+
+inspection:
+  # Ticks between live inspection updates when viewing an online player's inventory or ender chest
+  live-sync-ticks: 10
+
+  # Allow authorized staff to take items directly from live inspection GUI (syncs to player)
+  allow-taking-items-live: true
+
+  # Allow authorized staff to take items from historical snapshots (acts as item refund/evidence)
+  allow-taking-items-historical: true
+
+  # Strict protection: prevent placing/depositing foreign items into target's inventory
+  block-placing-items: true
+
+messages:
+  prefix: "<gradient:#c084fc:#f472b6><bold>▶ ULTIMATE LOGS</bold></gradient> "
+  no-permission: "<red>Access denied: You must be a server operator (OP) or staff member to use Ultimate Logs.</red>"
+  player-not-found: "<red>Player <white>{target}</white> could not be found.</red>"
+  offline-loaded: "<green>Player is offline. Loaded most recent recorded snapshot from <yellow>{interval}</yellow>.</green>"

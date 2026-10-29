@@ -1,0 +1,22 @@
+# Maven build output
+target/
+*.jar
+*.war
+*.ear
+
+# Logs and temporary files
+*.log
+temp_log.txt
+*.tmp
+
+# IDE / Editor files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS files
+.DS_Store
+Thumbs.db

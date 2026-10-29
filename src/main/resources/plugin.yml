@@ -1,0 +1,77 @@
+name: UltimateLogs
+version: '1.0.0-Paper26.2'
+main: com.ultimatelogs.UltimateLogs
+api-version: '1.21'
+author: Moonlight Development Team
+description: Enterprise Logging, Live Inventory & EnderChest, Position Breadcrumbs, Snapshot History and Death Investigation Core for Paper 26.2
+
+commands:
+  ultimatelogs:
+    description: Open the Ultimate Logs interactive GUI or query audit subsystems.
+    aliases: [ulogs, logs, auditlogs, paperlogs]
+    permission: ultimatelogs.view
+    usage: /ultimatelogs [player|subsystem|help]
+
+  inv:
+    description: Inspect a player's live inventory or historical snapshot archive.
+    aliases: [invsee, uinv]
+    permission: ultimatelogs.invsee
+    usage: /inv <player> [time|history|live]
+
+  ec:
+    description: Open player's own Ender Chest or inspect another player's live/historical Ender Chest.
+    aliases: [enderchest, uec]
+    usage: /ec [player] [time|history|live]
+
+  pos:
+    description: Track real-time coordinates, trail breadcrumbs, and position history.
+    aliases: [position, where, upos]
+    permission: ultimatelogs.position
+    usage: /pos <player> [time|history|live]
+
+  deaths:
+    description: View and investigate complete historical death records, inventories, and enderchests.
+    aliases: [deathlogs, deathhistory, udeaths]
+    permission: ultimatelogs.deaths
+    usage: /deaths <player> [time]
+
+permissions:
+  ultimatelogs.*:
+    description: Full access to all Ultimate Logs features, staff GUIs, and item restores.
+    default: op
+    children:
+      ultimatelogs.admin: true
+      ultimatelogs.view: true
+      ultimatelogs.invsee: true
+      ultimatelogs.enderchest: true
+      ultimatelogs.position: true
+      ultimatelogs.deaths: true
+      ultimatelogs.restore: true
+
+  ultimatelogs.admin:
+    description: Access to administrative commands, flushes, and database exports.
+    default: op
+
+  ultimatelogs.view:
+    description: Access to interactive /logs GUI and general log queries.
+    default: op
+
+  ultimatelogs.invsee:
+    description: Access to /inv and inventory snapshot inspection.
+    default: op
+
+  ultimatelogs.enderchest:
+    description: Access to inspect other players' Ender Chests.
+    default: op
+
+  ultimatelogs.position:
+    description: Access to /pos and coordinate trails.
+    default: op
+
+  ultimatelogs.deaths:
+    description: Access to /deaths and death snapshot recovery.
+    default: op
+
+  ultimatelogs.restore:
+    description: Permission to take evidence items and restore inventory from snapshots.
+    default: op
