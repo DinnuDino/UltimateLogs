@@ -20,3 +20,5 @@ temp_log.txt
 # OS files
 .DS_Store
 Thumbs.db
+*.png
+
