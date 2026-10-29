@@ -1,5 +1,8 @@
 # ⚡ UltimateLogs (Paper 26.2 & 1.21.x)
 
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/project/ultimatelogs)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DinnuDino/UltimateLogs)
+
 **Enterprise Logging, Live Inventory & EnderChest Inspection, Coordinate Breadcrumbs, Snapshot Archive, and Death Investigation Core.**
 
 Built for **Paper 26.x (Paper 26.1, 26.2, 26.3)** and **Minecraft 1.21.x Game Drops (1.21.1 – 1.21.11)** on **Java 21–25**.
