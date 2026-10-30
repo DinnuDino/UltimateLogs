@@ -2,7 +2,7 @@ name: UltimateLogs
 version: '1.0.0-Paper26.2'
 main: com.ultimatelogs.UltimateLogs
 api-version: '1.21'
-author: Moonlight Development Team
+author: DinnuDino
 description: Enterprise Logging, Live Inventory & EnderChest, Position Breadcrumbs, Snapshot History and Death Investigation Core for Paper 26.2
 
 commands:

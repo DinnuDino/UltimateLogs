@@ -20,8 +20,7 @@ import java.util.Locale;
 public class ItemBuilder {
 
     public static final NamespacedKey GUI_BUTTON_KEY = new NamespacedKey("ultimatelogs", "gui_button");
-    private static final NamespacedKey LEGACY_MOONLIGHT_KEY = new NamespacedKey("moonlight", "gui_item");
-    private static final NamespacedKey LEGACY_ACTION_KEY = new NamespacedKey("moonlight", "gui_action");
+    private static final NamespacedKey LEGACY_ACTION_KEY = new NamespacedKey("ultimatelogs", "gui_action");
 
     private final ItemStack item;
     private final ItemMeta meta;
@@ -118,7 +117,6 @@ public class ItemBuilder {
 
         // 1. Explicit PersistentDataContainer tag (primary and legacy keys)
         if (meta.getPersistentDataContainer().has(GUI_BUTTON_KEY, PersistentDataType.BYTE) ||
-            meta.getPersistentDataContainer().has(LEGACY_MOONLIGHT_KEY, PersistentDataType.BYTE) ||
             meta.getPersistentDataContainer().has(LEGACY_ACTION_KEY, PersistentDataType.STRING)) {
             return true;
         }
