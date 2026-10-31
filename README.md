@@ -2,6 +2,7 @@
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/project/ultimatelogs)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DinnuDino/UltimateLogs)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9macPyv5eP)
 
 **Enterprise Logging, Live Inventory & EnderChest Inspection, Coordinate Breadcrumbs, Snapshot Archive, and Death Investigation Core.**
 
@@ -87,6 +88,13 @@ mvn clean package
 ```
 
 The compiled shaded artifact will be located in `target/UltimateLogs-1.0.0-Paper26.2.jar`.
+
+---
+
+## 💬 Community & Support
+
+Join our Discord server for support, feature suggestions, and latest releases:  
+👉 **[Join Discord Server](https://discord.gg/9macPyv5eP)**
 
 ---
 
